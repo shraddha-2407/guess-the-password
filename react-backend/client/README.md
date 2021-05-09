@@ -2,23 +2,27 @@
 
 ## Features
 
-1a. Generates hint by calling `/new-password` [node API].
-1b. The hint is shuffle of actual 8 digit password stored in `node-cache`
-2a. Contains a Form with Input and Submit.
-2b. User enters 8 digit number, which is the added to the game board with highlights on numbers which match the password.
-3a. Once the user has guessed the password, the game board shows SUCCESS.
-3b. We also remove the entry from `node-cache`
-4a. User Entry is validated against on form submit
-    1. Empty entry
-    2. Alphanumeric entry
-    3. Length less or more than 8 digits.
-    4. Entry has duplicate digits.
-5. When user's entry is valid, `verify-password` is called [node API], which checks if,
-    1. password is present in `node-cache` for the hint passed as request object.
-    2. If password is not existing, we send back response of 404.
-    3. If password is existing, we check user's entry against it, to find the corrects digits.
-    4. Example: password is '87654321', answer is '86754312', then highlight is ['8','5','4','3']
-    5. if all the higlights are exactly in same position as password, then user win's the game.
+1a. Generates hint by calling `/new-password` [node API]. \
+1b. The hint is shuffle of actual 8 digit password stored in `node-cache` \
+\
+2a. Contains a Form with Input and Submit. \
+2b. User enters 8 digit number, which is the added to the game board with highlights on numbers which match the password. \
+\
+3a. Once the user has guessed the password, the game board shows SUCCESS. \
+3b. We also remove the entry from `node-cache` \
+\
+4a. User Entry is validated against on form submit 
++ Empty entry 
++ Alphanumeric entry 
++ Length less or more than 8 digits. 
++ Entry has duplicate digits. 
+
+5a. When user's entry is valid, `verify-password` is called [node API], which checks if, 
++ password is present in `node-cache` for the hint passed as request object. 
++ If password is not existing, we send back response of 404. 
++ If password is existing, we check user's entry against it, to find the corrects digits.
++ Example: ``` password is '87654321', answer is '86754312', then highlight is ['8','5','4','3'] ```
++ if all the higlights are exactly in same position as password, then user win's the game.
 
 # Getting Started with Create React App
 
