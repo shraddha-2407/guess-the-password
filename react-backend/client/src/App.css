@@ -1,0 +1,109 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  border: 1px solid black;
+  margin: 1.8rem;
+}
+
+.gameHeading {
+  border-bottom: 0.06rem solid black;
+}
+
+.gameBody {
+  margin: 1.8rem;
+}
+
+.gameLineItem {
+  margin: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content:after {
+  content: '----->';
+  display: inline-block;
+  margin: 0.3125rem;
+}
+
+.gameHint,
+.gameUserAnswer {
+  padding: 0.625rem;
+  font-size: 2.1875rem;
+}
+
+.gameUserAnswer {
+  border: 0.06rem solid black;
+}
+
+.gameHint {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.gameForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gameError {
+  color: red;
+  font-size: 1.25rem;
+}
+
+.gameForm fieldset {
+  border: none;
+  flex-direction: column;
+  display: flex;
+  text-align: left;
+}
+
+.gameForm fieldset > input {
+  border-radius: 0.3125rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.gameForm > button {
+  border-radius: 0.3125rem;
+  padding: 0.625rem;
+}
+
+.gameNumHightlighter {
+  background-color: #b7f3b9;
+  margin: 0.1875rem;
+}
+
+.gameMissing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 3rem;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    font-size: 0.875rem;
+  }
+
+  .gameLineItem{
+    flex-direction: column;
+  }
+
+  .content {
+    margin-bottom: 0.625rem;
+  }
+
+  .content:after {
+    content: '';
+    display: none;
+  }
+
+  .gameMissing {
+    font-size: 2rem;
+  }
+}
